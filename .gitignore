@@ -1,3 +1,5 @@
+.gitignote
 note.ipynb
 test.py
 database.py
+.json
