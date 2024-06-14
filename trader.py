@@ -7,9 +7,6 @@ from binance.spot import Spot
 from configs import COLORS
 from configs import KEY
 
-# Load variables from .env file
-load_dotenv()
-
 # Access API key and secret from environment
 API_KEY = KEY.API_KEY
 API_SECRET = KEY.API_SECRET

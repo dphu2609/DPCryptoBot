@@ -1,8 +1,6 @@
 from strategy import Strategy
 from configs import COLORS
 from miner import Miner
-import time
-import asyncio
 
 class Strategy1(Strategy):
     KLINE_INTERVAL = "3m"

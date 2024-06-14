@@ -1,4 +1,7 @@
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 class KEY:
     API_KEY = os.getenv('YOUR_API_KEY')

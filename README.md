@@ -55,6 +55,15 @@ The `Strategy1` class extends the abstract `Strategy` class to implement a speci
 
 **Note:** This code provides a simple example of an analyzing algorithm. Users are encouraged to implement and test other strategies to trade effectively.
 
+### configs.py
+This module contains the configuration settings for DPCryptoBot.
+
+#### Key Features:
+- **API Keys**: Store your Binance API keys here for authentication.
+
+**Note**: It is vital to store your API Key and API Secret to your local `.env` file.
+
+
 
 
 ## Installation
