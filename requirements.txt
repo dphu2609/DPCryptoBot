@@ -1,0 +1,4 @@
+asyncio
+websockets
+python-dotenv
+python-binance
