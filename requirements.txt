@@ -2,3 +2,4 @@ asyncio
 websockets
 python-dotenv
 python-binance
+binance-connector

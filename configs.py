@@ -4,9 +4,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 class KEY:
-    API_KEY = os.getenv('YOUR_API_KEY')
-    API_SECRET = os.getenv('YOUR_API_SECRET')
-    BASE_URL = 'https://api.binance.com'
+    API_KEY = os.getenv('API_KEY')
+    API_SECRET = os.getenv('API_SECRET')
+    BASE_URL = 'https://testnet.binance.vision'
 
 
 class COLORS:

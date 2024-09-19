@@ -18,6 +18,7 @@ class CryptoBot():
         self._wallet = Wallet()
         self._buyer = Buyer(self._miner, self._trader, self._wallet)
         self._seller = Seller(self._miner, self._trader, self._wallet)
+        self._threads = []
     
     def __del__(self):
         for t in self._threads:
@@ -72,7 +73,7 @@ class Buyer:
     def __init__(self, miner, trader, wallet):
         self._miner = miner
         self._trader = trader
-        self._strategy = Strategy(Strategy1())
+        self._strategy = Strategy1()
         self._wallet = wallet
         self._threads = []
         self._coin_list = None
@@ -143,7 +144,7 @@ class Seller:
     def __init__(self, miner, trader, wallet):
         self._miner = miner
         self._trader = trader
-        self._strategy = Strategy(Strategy1)
+        self._strategy = Strategy1()
         self._wallet = wallet
     
     async def sell_coins_holding(self):

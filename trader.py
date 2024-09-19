@@ -29,6 +29,7 @@ class Trader: # this class serves buying, selling, and getting balance of the ac
     def _authenticate(self):
         try:
             print(f"{COLORS.GREEN}Authenticating with API Key: {API_KEY}{COLORS.ENDC}")
+            print(f"{COLORS.GREEN}Trading via URL: {BASE_URL}{COLORS.ENDC}")
             self._client = Spot(base_url=BASE_URL, api_key=API_KEY, api_secret=API_SECRET)
             print(f"{COLORS.GREEN}Authenticated successfully!{COLORS.ENDC}")
         except binance.error.ClientError as e:

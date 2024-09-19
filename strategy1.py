@@ -3,12 +3,20 @@ from configs import COLORS
 from miner import Miner
 
 class Strategy1(Strategy):
+    _instance = None  # Class variable to hold the singleton instance
     KLINE_INTERVAL = "3m"
-    
+
+    def __new__(cls, *args, **kwargs):
+        if cls._instance is None:
+            cls._instance = super(Strategy1, cls).__new__(cls, *args, **kwargs)
+        return cls._instance
+
     def __init__(self):
-        print(f"{COLORS.GREEN}Applying STRATEGY 1{COLORS.ENDC}")
-        super().__init__()
-        self._miner = Miner()
+        if not hasattr(self, '_initialized'):
+            print(f"{COLORS.GREEN}Applying STRATEGY 1{COLORS.ENDC}")
+            super().__init__()
+            self._miner = Miner()
+            self._initialized = True  # Avoid reinitialization
         
     async def sort_coins_by_kline(self, coins):
         while True:
